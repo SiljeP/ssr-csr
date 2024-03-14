@@ -1,7 +1,6 @@
-import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ToastContainer } from "react-toastify";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +10,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body >
+        <nav className="p-4 bg-orange-500 flex gap-4 mb-4">
+          <Link href="/">Home</Link>
+          <Link href="/posts">Posts</Link>
+          <Link href="/users">Users</Link>
+          <Link href="/login">Login</Link>
+        </nav>
+        {children}
+        <ToastContainer />
+      </body>
     </html>
   );
 }

@@ -1,0 +1,14 @@
+
+
+.input:active + .label,
+.input:focus + .label,
+.input[value]:not([value=""]) + .label {
+    top: -1.5em; 
+    color:white;
+    font-size: .85em;
+}
+
+
+.label{
+    transition: all 500ms ease;
+}
