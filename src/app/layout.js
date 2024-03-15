@@ -16,6 +16,10 @@ export default function RootLayout({ children }) {
           <Link href="/posts">Posts</Link>
           <Link href="/users">Users</Link>
           <Link href="/login">Login</Link>
+          <Link href="/books">Books</Link>
+          <Link href="/booklibrary">Library</Link>
+          <Link href="/brianbook">Brian book</Link>
+
         </nav>
         {children}
         <ToastContainer />

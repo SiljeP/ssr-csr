@@ -17,8 +17,8 @@ export async function loginUser(prevState, formData) {
     }
 
     if (username !== "a@a.aa" || password !== "1234") {
-        return { success: false, _error: ["Incorrect username or password"] }
+        return { success: false, _error: "Incorrect username or password" }
     }
 
-    return { success: true, redirect: "/dashboard" }
+    return { success: true, redirect: "/" }
 }
