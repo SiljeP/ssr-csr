@@ -44,6 +44,13 @@ export async function createBook(prevState, formData) {
     return { success: true, mesage: "Book was created successfully", title: "", author: "" }
 }
 
+export async function getBook(id) {
+    await connect()
+    const result = await Book.findById(id)
+    await disconnect()
+    return result
+}
+
 export async function getBooks() {
 
     await connect()

@@ -4,7 +4,7 @@
 import { useRef, useEffect } from "react"
 import { toast } from "react-toastify"
 
-export default function BookForm({ formAction, formState }) {
+export default function BookForm({ formAction, formState, data = {} }) {
     const formRef = useRef(null)
 
     useEffect(function () {
@@ -16,13 +16,13 @@ export default function BookForm({ formAction, formState }) {
 
     return (
         <form action={formAction} ref={formRef}>
-            <label>
+            <label className="block">
                 Title
-                <input type="text" name="title" className="text-black" />
+                <input value={data.title} type="text" name="title" className="text-black" />
             </label>
-            <label>
+            <label className="block">
                 Author
-                <input type="text" name="author" className="text-black" />
+                <input value={data.author} type="text" name="author" className="text-black" />
             </label>
             {/* <Input label="Title" type="text" name="title" statusMessage={formState?.title?._errors} />
 			<Input label="Author" type="text" name="author" statusMessage={formState?.author?._errors} /> */}
